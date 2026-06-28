@@ -10,6 +10,11 @@ const recipientName = '{{ recipientName }}'
     <Head>
       <Font family="Inria Serif" :weights="[400, 700]" fallback="Georgia, 'Times New Roman', serif" />
       <Font family="Inter" :weights="[400, 500, 600, 700]" fallback="Arial, sans-serif" />
+      <meta name="color-scheme" content="light only" />
+      <meta name="supported-color-schemes" content="light only" />
+      <Raw>
+        <style>:root { color-scheme: light only; supported-color-schemes: light only; }</style>
+      </Raw>
     </Head>
 
     <Preheader>Welcome to Leasum, your account is ready.</Preheader>
