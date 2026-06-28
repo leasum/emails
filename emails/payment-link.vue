@@ -59,7 +59,7 @@ const paymentUrl = '{{ paymentUrl }}'
 
             <Section class="rounded-xl bg-zinc-50 px-6 py-5 text-center">
               <Text class="m-0 text-sm leading-6 text-zinc-500">Amount due</Text>
-              <Text class="m-0 font-serif text-[32px] font-bold leading-tight text-zinc-900">
+              <Text class="m-0 font-sans text-[32px] font-bold leading-tight text-zinc-900">
                 {{ amount }}
               </Text>
               <Text class="m-0 text-sm leading-6 text-zinc-500">{{ serviceName }}</Text>
