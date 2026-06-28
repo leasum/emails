@@ -1,6 +1,6 @@
 <script setup>
 const year = new Date().getFullYear()
-const logoUrl = 'https://i.imgur.com/nIYj26A.png'
+const logoUrl = 'https://leasum.com/emails/logo-dark.png'
 
 // Mailgun fills these at send time. Declared as JS strings so Vue interpolates
 // each into the literal text "{{ token }}" in the built HTML, keeping Maizzle's
@@ -52,7 +52,7 @@ const filingDate = '{{ filingDate }}'
             <Spacer class="h-4" />
 
             <Text class="m-0 text-base leading-7 text-zinc-600">
-              Congratulations — your company has been successfully registered. Your
+              Congratulations, your company has been successfully registered. Your
               Limited Liability Company now legally exists and is ready to operate.
             </Text>
 
@@ -73,8 +73,9 @@ const filingDate = '{{ filingDate }}'
             <Spacer class="h-8" />
 
             <Text class="m-0 text-base leading-7 text-zinc-600">
-              Your formation documents — Articles of Organization and EIN confirmation —
-              are available in your dashboard. We recommend keeping a copy for your records.
+              Your formation documents, including the Articles of Organization and EIN
+              confirmation, are available in your dashboard. We recommend keeping a copy for
+              your records.
             </Text>
 
             <Spacer class="h-8" />
