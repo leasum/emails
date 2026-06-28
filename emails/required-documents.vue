@@ -56,7 +56,8 @@ const documents = '{{{ documents }}}'
             <Spacer class="h-6" />
 
             <Section class="rounded-xl bg-zinc-50 px-6 py-5">
-              <Text class="m-0 text-base leading-7 text-zinc-900">
+              <Text class="m-0 text-sm leading-6 text-zinc-500">Required documents</Text>
+              <Text class="m-0 text-base font-semibold leading-7 text-zinc-900">
                 {{ documents }}
               </Text>
             </Section>
