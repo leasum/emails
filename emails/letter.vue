@@ -1,15 +1,5 @@
 <script setup>
-// Mailgun fills these tokens at send time. We declare them as JS strings so Vue
-// interpolates each one into the literal text "{{ token }}" in the built HTML —
-// keeping Maizzle's components active (unlike v-pre, which would skip them too).
-const preheader = '{{ preheader }}'
-const heading = '{{ heading }}'
-const recipientName = '{{ recipientName }}'
-// Triple braces tell Mailgun not to HTML-escape the body (it may contain HTML).
-const body = '{{{ body }}}'
 const year = new Date().getFullYear()
-
-// TODO: replace with the hosted logo URL once uploaded (see public/logo.png).
 const logoUrl = 'https://i.imgur.com/nIYj26A.png'
 </script>
 
@@ -20,7 +10,7 @@ const logoUrl = 'https://i.imgur.com/nIYj26A.png'
       <Font family="Inter" :weights="[400, 500, 600, 700]" fallback="Arial, sans-serif" />
     </Head>
 
-    <Preheader>{{ preheader }}</Preheader>
+    <Preheader>Your LLC has been successfully formed.</Preheader>
 
     <!-- Outer canvas -->
     <Section class="bg-zinc-100 font-sans">
@@ -45,22 +35,54 @@ const logoUrl = 'https://i.imgur.com/nIYj26A.png'
               level="1"
               class="m-0 font-serif text-[26px] font-bold leading-tight text-zinc-900"
             >
-              {{ heading }}
+              Your LLC is officially formed
             </Heading>
 
             <Spacer class="h-6" />
 
             <Text class="m-0 text-base leading-7 text-zinc-600">
-              Hi {{ recipientName }},
+              Dear Clint,
             </Text>
 
             <Spacer class="h-4" />
 
             <Text class="m-0 text-base leading-7 text-zinc-600">
-              {{ body }}
+              Congratulations — your company has been successfully registered. Your
+              Limited Liability Company now legally exists and is ready to operate.
+            </Text>
+
+            <Spacer class="h-6" />
+
+            <!-- Details panel -->
+            <Section class="rounded-xl bg-zinc-50 px-6 py-5">
+              <Text class="m-0 text-sm leading-6 text-zinc-500">Company name</Text>
+              <Text class="m-0 text-base font-semibold leading-6 text-zinc-900">Northstar Ventures LLC</Text>
+              <Spacer class="h-4" />
+              <Text class="m-0 text-sm leading-6 text-zinc-500">State of formation</Text>
+              <Text class="m-0 text-base font-semibold leading-6 text-zinc-900">Wyoming, United States</Text>
+              <Spacer class="h-4" />
+              <Text class="m-0 text-sm leading-6 text-zinc-500">Filing date</Text>
+              <Text class="m-0 text-base font-semibold leading-6 text-zinc-900">June 28, 2026</Text>
+            </Section>
+
+            <Spacer class="h-8" />
+
+            <Text class="m-0 text-base leading-7 text-zinc-600">
+              Your formation documents — Articles of Organization and EIN confirmation —
+              are available in your dashboard. We recommend keeping a copy for your records.
             </Text>
 
             <Spacer class="h-8" />
+
+            <!-- CTA -->
+            <Button
+              href="https://app.leasum.com"
+              class="rounded-full bg-[#FFE37B] px-7 py-3 text-sm font-semibold text-zinc-900 no-underline"
+            >
+              View my documents
+            </Button>
+
+            <Spacer class="h-10" />
 
             <Text class="m-0 text-base leading-7 text-zinc-600">
               Warm regards,<br />
