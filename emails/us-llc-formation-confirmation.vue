@@ -1,6 +1,14 @@
 <script setup>
 const year = new Date().getFullYear()
 const logoUrl = 'https://i.imgur.com/nIYj26A.png'
+
+// Mailgun fills these at send time. Declared as JS strings so Vue interpolates
+// each into the literal text "{{ token }}" in the built HTML, keeping Maizzle's
+// components active (unlike v-pre, which would skip them too).
+const recipientName = '{{ recipientName }}'
+const companyName = '{{ companyName }}'
+const state = '{{ state }}'
+const filingDate = '{{ filingDate }}'
 </script>
 
 <template>
@@ -16,20 +24,17 @@ const logoUrl = 'https://i.imgur.com/nIYj26A.png'
     <Section class="bg-zinc-100 font-sans">
       <Container class="max-w-[600px] px-6 py-10">
 
-        <!-- Logo, centered -->
+        <!-- Logo, centered above the card -->
         <Row>
           <Column class="text-center">
-            <Img :src="logoUrl" width="160" alt="Leasum" class="mx-auto" />
+            <Img :src="logoUrl" width="144" alt="Leasum" class="mx-auto" />
           </Column>
         </Row>
 
         <Spacer class="h-8" />
 
         <!-- Card -->
-        <Section class="overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_-8px_rgba(24,24,27,0.10),0_4px_10px_-4px_rgba(24,24,27,0.06)]">
-          <!-- Brand accent bar -->
-          <Section class="h-1 bg-[#FFE37B] leading-none">&zwnj;</Section>
-
+        <Section class="overflow-hidden rounded-2xl border-t-4 border-[#FFE37B] bg-white shadow-[0_10px_30px_-8px_rgba(24,24,27,0.10),0_4px_10px_-4px_rgba(24,24,27,0.06)]">
           <Section class="px-10 py-12">
             <Heading
               level="1"
@@ -41,7 +46,7 @@ const logoUrl = 'https://i.imgur.com/nIYj26A.png'
             <Spacer class="h-6" />
 
             <Text class="m-0 text-base leading-7 text-zinc-600">
-              Dear Clint,
+              Dear {{ recipientName }},
             </Text>
 
             <Spacer class="h-4" />
@@ -56,13 +61,13 @@ const logoUrl = 'https://i.imgur.com/nIYj26A.png'
             <!-- Details panel -->
             <Section class="rounded-xl bg-zinc-50 px-6 py-5">
               <Text class="m-0 text-sm leading-6 text-zinc-500">Company name</Text>
-              <Text class="m-0 text-base font-semibold leading-6 text-zinc-900">Northstar Ventures LLC</Text>
+              <Text class="m-0 text-base font-semibold leading-6 text-zinc-900">{{ companyName }}</Text>
               <Spacer class="h-4" />
               <Text class="m-0 text-sm leading-6 text-zinc-500">State of formation</Text>
-              <Text class="m-0 text-base font-semibold leading-6 text-zinc-900">Wyoming, United States</Text>
+              <Text class="m-0 text-base font-semibold leading-6 text-zinc-900">{{ state }}</Text>
               <Spacer class="h-4" />
               <Text class="m-0 text-sm leading-6 text-zinc-500">Filing date</Text>
-              <Text class="m-0 text-base font-semibold leading-6 text-zinc-900">June 28, 2026</Text>
+              <Text class="m-0 text-base font-semibold leading-6 text-zinc-900">{{ filingDate }}</Text>
             </Section>
 
             <Spacer class="h-8" />
