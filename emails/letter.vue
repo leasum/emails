@@ -10,7 +10,7 @@ const body = '{{{ body }}}'
 const year = new Date().getFullYear()
 
 // TODO: replace with the hosted logo URL once uploaded (see public/logo.png).
-const logoUrl = 'https://leasum.com/email/logo.png'
+const logoUrl = 'https://i.imgur.com/nIYj26A.png'
 </script>
 
 <template>
