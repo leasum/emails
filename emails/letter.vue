@@ -100,9 +100,7 @@ const logoUrl = 'https://i.imgur.com/nIYj26A.png'
           </Text>
           <Spacer class="h-3" />
           <Text class="m-0 text-xs leading-5 text-zinc-400">
-            Leasum &mdash; &copy; {{ year }}. All rights reserved.
-            <br />
-            <Link href="https://leasum.com" class="text-zinc-500 underline">leasum.com</Link>
+            Copyright &copy; {{ year }} Leasum.com All Rights Reserved
           </Text>
         </Section>
 
