@@ -96,13 +96,13 @@ const logoUrl = 'https://i.imgur.com/nIYj26A.png'
         <!-- Footer -->
         <Section class="px-6 text-center">
           <Text class="m-0 text-sm font-medium leading-6 text-zinc-500">
-            The operating system for your global sovereignty.
+            Your international setup, finally on a single platform.
           </Text>
           <Spacer class="h-3" />
           <Text class="m-0 text-xs leading-5 text-zinc-400">
             Leasum &mdash; &copy; {{ year }}. All rights reserved.
             <br />
-            Part of <Link href="https://xxi.business" class="text-zinc-500 underline">XXI, LLC</Link>
+            <Link href="https://leasum.com" class="text-zinc-500 underline">leasum.com</Link>
           </Text>
         </Section>
 
