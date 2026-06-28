@@ -2,6 +2,5 @@
 .vscode
 .maizzle
 node_modules
-dist
 Thumbs.db
 .DS_Store
